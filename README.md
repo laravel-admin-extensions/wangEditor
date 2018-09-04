@@ -10,7 +10,7 @@ wangEditor extension for laravel-admin
 ## 安装
 
 ```bash
-composer require laravel-admin-ext/wangEditor
+composer require laravel-admin-ext/wang-editor
 ```
 
 然后
