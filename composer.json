@@ -1,5 +1,5 @@
 {
-    "name": "laravel-admin-ext/wangEditor",
+    "name": "laravel-admin-ext/wang-editor",
     "description": "wangEditor extension for laravel-admin",
     "type": "library",
     "keywords": ["laravel-admin", "extension", "editor"],
