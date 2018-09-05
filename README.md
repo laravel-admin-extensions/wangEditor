@@ -1,7 +1,7 @@
 wangEditor extension for laravel-admin
 ======
 
-这是一个laravel-admin扩展，用来将wangEditor继承进laravel-admin的表单中
+这是一个`laravel-admin`扩展，用来将`wangEditor`集成进`laravel-admin`的表单中
 
 ## 截图
 
@@ -45,6 +45,13 @@ php artisan vendor:publish --tag=laravel-admin-wangEditor
     'config' => [
         'uploadImgServer' => '/upload'
     ]
+```
+
+## 使用
+
+在form表单中使用它：
+```php
+$form->editor('content');
 ```
 
 ## 支持

@@ -23,12 +23,12 @@ class WangEditorServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole() && $assets = $extension->assets()) {
             $this->publishes(
-                [$assets => public_path('vendor/encore/laravel-admin-wangEditor')],
+                [$assets => public_path('vendor/laravel-admin-ext/wang-editor')],
                 'laravel-admin-wangEditor'
             );
         }
 
-        Admin::booted(function () {
+        Admin::booting(function () {
             Form::extend('editor', Editor::class);
         });
     }

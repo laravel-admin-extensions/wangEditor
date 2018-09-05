@@ -1,6 +1,6 @@
-<div class="form-group {!! !$errors->has($label) ?: 'has-error' !!}">
+<div class="{{$viewClass['form-group']}} {!! !$errors->has($errorKey) ? '' : 'has-error' !!}">
 
-    <label for="{{$id}}" class="col-sm-2 control-label">{{$label}}</label>
+    <label for="{{$id}}" class="{{$viewClass['label']}} control-label">{{$label}}</label>
 
     <div class="{{$viewClass['field']}}">
 
@@ -11,6 +11,8 @@
         </div>
 
         <input type="hidden" name="{{$name}}" value="{{ old($column, $value) }}" />
+
+        @include('admin::form.help-block')
 
     </div>
 </div>
