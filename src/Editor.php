@@ -25,12 +25,16 @@ class Editor extends Field
         $config = json_encode(array_merge([
             'zIndex'              => 0,
             'uploadImgShowBase64' => true,
-        ], $config));
+        ], $config, $this->options));
+
+        $token = csrf_token();
 
         $this->script = <<<EOT
 
 var E = window.wangEditor
 var editor = new E('#{$this->id}');
+
+editor.customConfig.uploadImgParams = {_token: '$token'}
 
 Object.assign(editor.customConfig, {$config})
 
