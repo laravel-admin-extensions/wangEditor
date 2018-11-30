@@ -19,6 +19,7 @@ class Editor extends Field
     public function render()
     {
         $name = $this->formatName($this->column);
+        $id = $this->formatName($this->id);
 
         $config = (array) WangEditor::config('config');
 
@@ -39,7 +40,7 @@ editor.customConfig.uploadImgParams = {_token: '$token'}
 Object.assign(editor.customConfig, {$config})
 
 editor.customConfig.onchange = function (html) {
-    $('input[name=$name]').val(html);
+    $('#input-$id').val(html);
 }
 editor.create()
 

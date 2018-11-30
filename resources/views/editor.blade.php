@@ -10,7 +10,7 @@
             <p>{!! old($column, $value) !!}</p>
         </div>
 
-        <input type="hidden" name="{{$name}}" value="{{ old($column, $value) }}" />
+        <input id="input-{{$id}}" type="hidden" name="{{$name}}" value="{{ old($column, $value) }}" />
 
         @include('admin::form.help-block')
 
