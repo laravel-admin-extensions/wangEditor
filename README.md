@@ -1,7 +1,9 @@
 wangEditor extension for laravel-admin
 ======
 
-这是一个`laravel-admin`扩展，用来将`wangEditor`集成进`laravel-admin`的表单中
+这是一个`laravel-admin`扩展，用来将`wangEditor`集成进`laravel-admin`的表单中。
+
+[v2版本点这里](https://github.com/laravel-admin-extensions/wangEditor2)
 
 ## 截图
 
