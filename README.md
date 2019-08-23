@@ -43,6 +43,7 @@ php artisan vendor:publish --tag=laravel-admin-wangEditor
 
 ```php
     'config' => [
+        // `/upload`接口用来上传文件，上传逻辑要自己实现，可参考下面的`上传图片`
         'uploadImgServer' => '/upload'
     ]
 ```
@@ -53,6 +54,29 @@ php artisan vendor:publish --tag=laravel-admin-wangEditor
 ```php
 $form->editor('content');
 ```
+
+## 上传图片
+
+如果你不使用base64格式存储上传图片，而是要上传图片到接口`/upload`，那么下面是这个接口对应的action代码示例：
+
+    use Illuminate\Http\Request;
+    use Illuminate\Support\Facades\Storage;
+
+    public function upload(Request $request)
+    {
+        $urls = [];
+
+        foreach ($request->file() as $file) {
+            $urls[] = Storage::url($file->store('images'));
+        }
+
+        return [
+            "errno" => 0,
+            "data"  => $urls,
+        ];
+    }
+
+> **Note:** 存储的disk配置在`config/filesystem.php`中，这个需参考laravel官方文档。
 
 ## 支持
 
