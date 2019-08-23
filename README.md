@@ -57,7 +57,7 @@ $form->editor('content');
 
 ## 上传图片
 
-如果你不使用base64格式存储上传图片，而是要上传图片到接口`/upload`，那么下面是这个接口对应的action代码示例：
+图片上传默认使用base64格式化后与文本内容一起存入数据库，如果要上传图片到本地接口，那么下面是这个接口对应的action代码示例：
 
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Storage;
@@ -76,7 +76,7 @@ $form->editor('content');
         ];
     }
 
-> **Note:** 存储的disk配置在`config/filesystem.php`中，这个需参考laravel官方文档。
+> **Note:** 配置路由指向这个action，存储的disk配置在`config/filesystem.php`中，这个需参考laravel官方文档。
 
 ## 支持
 
