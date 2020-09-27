@@ -16,7 +16,7 @@ laravel-admin | extension
 
 ```bash
 // laravel-admin 1.x
-composer require laravel-admin-ext/wang-editor:1.*
+composer require "laravel-admin-ext/wang-editor:1.*"
 
 // laravel-admin 2.x
 composer require laravel-admin-ext/wang-editor
