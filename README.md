@@ -5,8 +5,8 @@ wangEditor extension for laravel-admin
 
 laravel-admin | extension
 ---- | ---
-1.* | 1.*
-2.* |2.* 
+1.x | 1.x
+2.x |2.x
 
 ## 截图
 
