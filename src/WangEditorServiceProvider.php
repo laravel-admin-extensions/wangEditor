@@ -2,7 +2,7 @@
 
 namespace Encore\WangEditor;
 
-use Encore\Admin\Admin;
+use Encore\Admin\Assets;
 use Encore\Admin\Form;
 use Illuminate\Support\ServiceProvider;
 
@@ -21,15 +21,11 @@ class WangEditorServiceProvider extends ServiceProvider
             $this->loadViewsFrom($views, 'laravel-admin-wangEditor');
         }
 
-        if ($this->app->runningInConsole() && $assets = $extension->assets()) {
-            $this->publishes(
-                [$assets => public_path('vendor/laravel-admin-ext/wang-editor')],
-                'laravel-admin-wangEditor'
-            );
-        }
+        Assets::define('wangEditor', [
+            'js'     => 'https://cdn.jsdelivr.net/npm/wangeditor@3.1.1/release/wangEditor.min.js',
+            'export' => 'wangEditor',
+        ]);
 
-        Admin::booting(function () {
-            Form::extend('editor', Editor::class);
-        });
+        Form::extend('editor', Editor::class);
     }
 }
