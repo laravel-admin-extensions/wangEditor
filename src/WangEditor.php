@@ -6,7 +6,7 @@ use Encore\Admin\Extension;
 
 class WangEditor extends Extension
 {
-    public $name = 'editor';
+    public $name = 'wang-editor';
 
     public $views = __DIR__.'/../resources/views';
 }
