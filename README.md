@@ -2,7 +2,12 @@ wangEditor extension for laravel-admin
 ======
 fork from:https://github.com/laravel-admin-extensions/wangEditor
 
-这个仓库独立出来是给自己使用的 
+这个仓库独立出来是给自己使用的，目前 wangEditor 的版本为 4.6.9
+
+``` bash
+// 升级生重新发布静态资源
+php artisan vendor:publish --force --tag=laravel-admin-wangEditor
+```
 
 这是一个`laravel-admin`扩展，用来将`wangEditor`集成进`laravel-admin`的表单中
 
