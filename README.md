@@ -5,7 +5,7 @@ fork from:https://github.com/laravel-admin-extensions/wangEditor
 这个仓库独立出来是给自己使用的，目前 wangEditor 的版本为 4.6.9
 
 ``` bash
-// 升级生重新发布静态资源
+// 注意：升级后需要重新发布静态资源
 php artisan vendor:publish --force --tag=laravel-admin-wangEditor
 ```
 
