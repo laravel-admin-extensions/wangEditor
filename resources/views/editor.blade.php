@@ -13,9 +13,9 @@
 <script require="wangEditor" @script>
     var $editor = new wangEditor(this);
     var $textarea = $(this).parent().find('textarea');
-    $editor.customConfig.onchange = function (html) {
+    $editor.config.onchange = function (html) {
         $textarea.val(html);
     }
-    $editor.customConfig = Object.assign($editor.customConfig, @json($config));
+    $editor.config = Object.assign($editor.config, @json($config));
     $editor.create();
 </script>
